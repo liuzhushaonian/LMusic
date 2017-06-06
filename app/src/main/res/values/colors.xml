@@ -3,4 +3,28 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorGray">#333333</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray2">#2e3740</color>
+    <color name="colorAlpha">#333333</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorButton">#c1c1c1</color>
+    <color name="colorAlpha2">#00000000</color>
+    <color name="colorPlayingBar">#50404244</color>
+    <color name="colorProgress">#949597</color>
+    <color name="colorPlayingBarFirst">#61383738</color>
+    <color name="colorOrange">#e97508</color>
+    <color name="colorPurple">#6d02ab</color>
+
+    <color name="colorYellow">#fbff00</color>
+
+    <color name="colorPink">#ff80ab</color>
+    <color name="colorRed">#ffb78a</color>
+
+
+    <color name="colorLightBlue">#03A9F4</color>
+
+    <color name="colorCP">#00ffd0</color>
+
+
 </resources>

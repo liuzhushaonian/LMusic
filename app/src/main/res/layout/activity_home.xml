@@ -5,16 +5,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.legend.lmusic.HomeActivity">
+    tools:context="com.example.legend.lmusic.view.HomeActivity"
+    android:background="@drawable/bg_default"
+    >
     <include layout="@layout/toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
-
-        >
+        android:orientation="vertical">
     <!--<include layout="@layout/recycler"/>-->
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabTextAppearance="@style/TablayoutTextStyle"
+            app:tabTextColor="@color/colorWhite"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/colorWhite"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabMode="fixed"
+            android:id="@+id/tab_layout"
+            >
+
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager"
+            >
+
+
+        </android.support.v4.view.ViewPager>
+
+
 
 
     </LinearLayout>
