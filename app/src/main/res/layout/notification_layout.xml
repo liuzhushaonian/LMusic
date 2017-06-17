@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+                android:id="@+id/notification_big_layout"
+    >
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+
+        android:scaleType="center"
+        android:id="@+id/notification_albums"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/notification_albums"
+        android:id="@+id/notification_bg"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="16dp"
+            android:id="@+id/notification_info"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/song_name"
+
+                android:id="@+id/notification_song_name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/artist"
+
+                android:id="@+id/notification_artist"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:maxLines="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/notification_info"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/pre"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:id="@+id/notification_previous"
+
+                />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/play"
+                android:layout_marginRight="20dp"
+                android:scaleType="center"
+                android:layout_weight="1"
+
+                android:id="@+id/notification_play"
+
+                />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/next"
+                android:id="@+id/notification_next"
+
+                android:scaleType="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

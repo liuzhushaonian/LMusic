@@ -10,4 +10,8 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="ButtonTheme">
+        <item name="android:background">@drawable/select_theme</item>
+    </style>
+
 </resources>

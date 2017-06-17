@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<com.example.legend.lmusic.view.VDHLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.legend.lmusic.view.HomeActivity"
-    android:background="@drawable/bg_default"
+
+    android:id="@+id/full_screen"
     >
-    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/toolbar"
+             android:id="@+id/toolbar"
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,6 +31,7 @@
             app:tabSelectedTextColor="@color/colorWhite"
             app:tabMode="fixed"
             android:id="@+id/tab_layout"
+            android:background="@color/colorPink"
             >
 
 
@@ -35,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/view_pager"
+
             >
 
 
@@ -46,4 +53,63 @@
     </LinearLayout>
 
 
-</RelativeLayout>
+
+        <com.example.legend.lmusic.view.BezierView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/view_previous"
+            android:layout_marginTop="50dp"
+            app:circleRadius="25dp"
+            app:buttonNormalColor="@color/colorCP"
+            />
+
+        <com.example.legend.lmusic.view.BezierView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/view_play"
+            android:layout_marginTop="100dp"
+            app:circleRadius="25dp"
+            app:buttonNormalColor="@color/colorOrange"
+            />
+        <com.example.legend.lmusic.view.BezierView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/view_next"
+            android:layout_marginTop="150dp"
+            app:circleRadius="25dp"
+            app:buttonNormalColor="@color/colorYellow"
+
+            />
+        <com.example.legend.lmusic.view.BezierView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/view_status"
+            android:layout_marginTop="200dp"
+            app:circleRadius="25dp"
+            app:isStatus="true"
+            app:buttonNormalColor="@color/colorPurple"
+
+
+
+            />
+
+    <com.example.legend.lmusic.view.BezierView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/setting"
+        app:circleRadius="25dp"
+        android:layout_marginTop="250dp"
+        app:buttonNormalColor="@color/colorLightBlue"
+        />
+        <com.example.legend.lmusic.view.CircleImage
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/controller"
+            android:src="@drawable/huaji"
+
+            />
+
+
+
+
+</com.example.legend.lmusic.view.VDHLayout>

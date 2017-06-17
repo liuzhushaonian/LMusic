@@ -16,7 +16,9 @@
     <color name="colorOrange">#e97508</color>
     <color name="colorPurple">#6d02ab</color>
 
-    <color name="colorYellow">#fbff00</color>
+    <color name="colorMi">#b6ab92</color>
+
+    <color name="colorYellow">#ffd000</color>
 
     <color name="colorPink">#ff80ab</color>
     <color name="colorRed">#ffb78a</color>
@@ -24,7 +26,9 @@
 
     <color name="colorLightBlue">#03A9F4</color>
 
-    <color name="colorCP">#00ffd0</color>
+    <color name="colorCP">#00c4ff</color>
+    
+    <color name="colorSliver">#dbe1db</color>
 
 
 </resources>

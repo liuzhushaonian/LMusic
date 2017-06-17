@@ -2,5 +2,52 @@
     <string name="app_name">LMusic</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="random_albums">随机专辑</string>
+    <string name="music">音乐</string>
+    <string name="fen">  |  </string>
+    <string name="unknown">unknown</string>
+    <string name="song_name">song_name</string>
+    <string name="artist">artist</string>
+    <string name="albums">albums</string>
+    <string name="exit">exit</string>
+    <string name="albums2">专辑</string>
+    <string name="all_music">所有歌曲</string>
+    <string name="action_search">action_search</string>
+    <string name="all_random">全部随机播放</string>
+    <string name="list_mode">排序方式</string>
+    <string name="setting">设置</string>
+    <string name="play">播放</string>
+    <string name="play_nest">播放下一首</string>
+    <string name="play_album">播放专辑</string>
+    <string name="add_in_list">添加到播放列表</string>
+    <string name="add_in_playlist">添加到队列</string>
+    <string name="more">来自此艺术家的更多作品</string>
+    <string name="ling">设为铃声</string>
+    <string name="delete">删除</string>
+    <string name="change_image">更改图像</string>
+    <string name="random_artist">随机艺术家</string>
+    <string name="junhengqi">均衡器</string>
+    <string name="save_list">保存队列到播放列表</string>
+    <string name="clean_list">清除队列</string>
+    <string name="delete_in_list">从队列移除</string>
+
+
+    <string name="newList">新的播放列表</string>
+
+    <string name="controlMode">控制模式</string>
+    <string name="sub_controlMode">可以改变控制器的控制方式</string>
+    <string name="controlImageDIY">自定义控制图</string>
+    <string name="sub_controlImageDIY">可以自定义控制器图片</string>
+    <string name="theme">主题</string>
+    <string name="sub_theme">可更改当前主题</string>
+    <string name="time">_:_</string>
+    <string name="default_theme">基佬紫</string>
+    <string name="yellow_theme">活力黄</string>
+    <string name="pink_theme">少女粉</string>
+    <string name="diy">自定义图片</string>
+    <string name="green">清新绿</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

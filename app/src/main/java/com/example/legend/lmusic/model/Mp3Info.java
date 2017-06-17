@@ -13,6 +13,15 @@ public class Mp3Info {
     private long artistId;
     private int albumId;
     private String url;
+    private String artist;
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
 
     public String getSongName() {
         return songName;

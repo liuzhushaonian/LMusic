@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="bottomHeight">48dp</dimen>
+    <dimen name="albumsWidth">50dp</dimen>
+    <dimen name="albumsSpace">15dp</dimen>
+    <dimen name="smallSpace">2dp</dimen>
+    <dimen name="notification">128dp</dimen>
+    <dimen name="notification_small">64dp</dimen>
+
+    <dimen name="albums">100dp</dimen>
+
+</resources>

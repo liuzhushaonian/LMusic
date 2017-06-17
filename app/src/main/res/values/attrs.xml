@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BezierView">
+        <attr name="circleRadius" format="dimension"/>
+        <attr name="dimens" format="dimension"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="buttonNormalColor" format="color"/>
+        <attr name="buttonPressColor" format="color"/>
+        <attr name="actionIcon" format="reference"/>
+        <attr name="isStatus" format="boolean"/>
+
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="radius" format="dimension"/>
+        <attr name="normalColor" format="color"/>
+    </declare-styleable>
+
+</resources>
