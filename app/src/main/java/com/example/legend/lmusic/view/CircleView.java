@@ -40,7 +40,7 @@ public class CircleView extends View{
     public CircleView(Context context) {
 //        this(context,null);
         super(context);
-        System.out.println("BezierView.BezierView1");
+
     }
 
 
@@ -68,7 +68,7 @@ public class CircleView extends View{
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
-        System.out.println("绘制成圆形~~~~~~~~~");
+
 
         paint=new Paint();
         paint.setStyle(Paint.Style.FILL);

@@ -153,7 +153,7 @@ public class MusicFragment extends BaseFragment implements OpenFragmentLinstener
                         }
 
                     }.start();
-                    System.out.println("写入成功！！！");
+
                     break;
             }
         }
@@ -266,7 +266,7 @@ public class MusicFragment extends BaseFragment implements OpenFragmentLinstener
         builder.setTitle(mp3Info.getSongName()).setItems(strings1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                System.out.println("你点击了---------="+which);
+
                 String list=strings1[which];
                 switch (list){
                     case "添加新列表":

@@ -26,24 +26,24 @@ public class ImageSelector {
         String imagePath=null;
         Uri uri=intent.getData();
         if (DocumentsContract.isDocumentUri(LApplication.getContext(),uri)){
-            System.out.println("doc");
+
             String docId=DocumentsContract.getDocumentId(uri);
             if ("com.android.providers.media.documents".equals(uri.getAuthority())){
-                System.out.println("doc1");
+
                 String id=docId.split(":")[1];
                 String selection= MediaStore.Images.Media._ID+"="+id;
                 imagePath=getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,selection);
             }else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())){
-                System.out.println("doc2");
+
                 Uri contentUri= ContentUris.withAppendedId(Uri.parse("content://downloads/public/public_downloads"),Long.valueOf(docId));
                 imagePath=getImagePath(contentUri,null);
             }
         }else if ("content".equalsIgnoreCase(uri.getScheme())){
-            System.out.println("content");
+
             imagePath=getImagePath(uri,null);
 
         }else if ("file".equalsIgnoreCase(uri.getScheme())){
-            System.out.println("file");
+
             imagePath=uri.getPath();
         }
 

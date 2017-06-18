@@ -44,7 +44,7 @@ public class AnimationUtil {
 
                     if (i==3){
                          objectAnimator2=ObjectAnimator.ofFloat(views.get(3),VERTICAL,0,-100);
-                        System.out.println("这里执行了1--------="+objectAnimator2.toString());
+
                     }
                     break;
                 case RIGHT_UP:
@@ -53,7 +53,7 @@ public class AnimationUtil {
                     }
                     if (i==3){
                         objectAnimator2=ObjectAnimator.ofFloat(views.get(3),VERTICAL,0,-100);
-                        System.out.println("这里执行了2--------="+objectAnimator2.toString());
+
                     }
 
                     break;
@@ -64,7 +64,7 @@ public class AnimationUtil {
                     }
                     if (i==3){
                         objectAnimator2=ObjectAnimator.ofFloat(views.get(3),VERTICAL,0,-100);
-                        System.out.println("这里执行了3--------="+objectAnimator2.toString());
+
                     }
                     break;
                 case LEFT_UP:
@@ -74,7 +74,7 @@ public class AnimationUtil {
                     }
                     if (i==3){
                         objectAnimator2=ObjectAnimator.ofFloat(views.get(3),VERTICAL,0,-100);
-                        System.out.println("这里执行了4--------="+objectAnimator2.toString());
+
                     }
                     break;
             }
@@ -105,7 +105,7 @@ public class AnimationUtil {
 
                         if (bezierView.isStatus){//如果是状态按钮，则与其他动画方向不同，根据当前控制器位置选择弹出方向
                             propertyAnimator.translationY(-distance);
-                            System.out.println("布局了！！");
+
                         }else {
                             propertyAnimator.translationX(-distance*(positopn));
                         }
@@ -235,7 +235,7 @@ public class AnimationUtil {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                System.out.println("播放完成！！！");
+
                 propertyAnimator.rotationBy(359);
             }
         });

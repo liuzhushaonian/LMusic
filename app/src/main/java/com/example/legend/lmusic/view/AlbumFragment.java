@@ -141,7 +141,7 @@ public class AlbumFragment extends BaseFragment {
                 switch (item.getItemId()){
                     case R.id.item_seartch:
                         openFragment(new SearchFragment());
-                        System.out.println("点击事件");
+
                         break;
                 }
                 return true;

@@ -114,8 +114,8 @@ public class Mp3Database extends SQLiteOpenHelper{
                     "artistId INTEGER)";
             sqLiteDatabase.execSQL(table);
         }catch (Exception e){
-            //e.fillInStackTrace();
-            System.out.println("the table is exist!");
+            e.fillInStackTrace();
+
         }
     }
 
@@ -132,8 +132,8 @@ public class Mp3Database extends SQLiteOpenHelper{
                     "id INTEGER PRIMARY KEY AUTOINCREMENT,historyInput TEXT NOT NULL UNIQUE)";
             sqLiteDatabase.execSQL(table);
         }catch (Exception e){
-            //e.fillInStackTrace();
-            System.out.println("the table is exist!");
+            e.fillInStackTrace();
+
         }
     }
 
@@ -144,7 +144,7 @@ public class Mp3Database extends SQLiteOpenHelper{
             String sql="insert into "+HISTORY+" (historyInput) values ('"+historyString+"')";
             sqLiteDatabase.execSQL(sql);
         }catch (Exception e){
-            System.out.println("the table is exist!");
+            e.fillInStackTrace();
         }
 
     }
@@ -168,8 +168,8 @@ public class Mp3Database extends SQLiteOpenHelper{
             createTable(HISTORYMUSIC);//创建播放历史表单
 
         }catch (Exception e){
-            //e.fillInStackTrace();
-            System.out.println("the table is exist!");
+            e.fillInStackTrace();
+
         }
     }
 
@@ -185,7 +185,7 @@ public class Mp3Database extends SQLiteOpenHelper{
         if (cursor.moveToFirst()) {
             do {
                 String string=cursor.getString(cursor.getColumnIndex(key));
-                System.out.println("得到了名称---------------"+string);
+
                 strings.add(string);
             }while (cursor.moveToNext());
         }
@@ -224,7 +224,7 @@ public class Mp3Database extends SQLiteOpenHelper{
         if (cursor.moveToFirst()) {
             do {
                 String string=cursor.getString(cursor.getColumnIndex("listName"));
-                System.out.println("得到了名称---------------"+string);
+
                 strings.add(string);
 
 
@@ -239,7 +239,7 @@ public class Mp3Database extends SQLiteOpenHelper{
         try {
             String sql="delete from "+PLAYLIST+" where listName = '"+list+"'";
             sqLiteDatabase.execSQL(sql);
-            System.out.println("chanchuchenggong!!!!");
+
         }catch (Exception e){
             e.fillInStackTrace();
         }
@@ -293,11 +293,7 @@ public class Mp3Database extends SQLiteOpenHelper{
         contentValues.put(DATA,mp3Info.getUrl());
         contentValues.put(ALBUMSID,mp3Info.getAlbumId());
         contentValues.put(ARTISTID,mp3Info.getArtistId());
-//        if (mp3Info.isHas_albums_book()){
-//            contentValues.put(ISALBUMBOOK,1);
-//        }else {
-//            contentValues.put(ISALBUMBOOK,0);
-//        }
+
 
         sqLiteDatabase.insert(table,null,contentValues);
         contentValues.clear();
@@ -338,9 +334,9 @@ public class Mp3Database extends SQLiteOpenHelper{
             String sql="DELETE FROM "+table+" WHERE "+SONG+"="+"'"+mp3Info.getSongName()+"'";
             sqLiteDatabase.execSQL(sql);
 
-            System.out.println("删除成功！");
+
         }catch (Exception e){
-            System.out.println("删除失败");
+            e.fillInStackTrace();
         }
 
 

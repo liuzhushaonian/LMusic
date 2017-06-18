@@ -77,7 +77,7 @@ public class PlayHelper implements PlayControl{
         //判断当前状态
         switch (playStatus){
             case PLAY_RANDOM://随机模式
-                System.out.println("现在的状态是---------"+playStatus);
+
                 currentPosition=getCurrentPosition();
                 if (currentPosition<0||currentPosition>mp3Infos.size()){
                     currentPosition=getCurrentPosition();
@@ -163,7 +163,7 @@ public class PlayHelper implements PlayControl{
     @Override
     public void play(Mp3Info mp3Info) {
         getPlayer();
-        System.out.println(mp3Info.getSongName());
+
 
         try {
             player.play(mp3Info);

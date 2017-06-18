@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
         mp3Database=Mp3Database.getMp3Database();
-        System.out.println("所得的路径是-----------="+IMAGE_PATH);
+
         imageLoader=ImageLoader.getImageLoader();
 //        mPresenter.attachView((V) this);
         playHelper=PlayHelper.getPlayHelper();

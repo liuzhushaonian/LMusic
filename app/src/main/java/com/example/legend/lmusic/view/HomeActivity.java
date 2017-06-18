@@ -20,6 +20,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,6 +58,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
     VDHLayout vdhLayout;
     Bundle bundle;
 
+    private static final String TAG="HomeActivity";
+
+    private void log(String s){
+        Log.d(TAG, "log: "+s);
+    }
 
 
     private ArrayList<PlayStatus> playStatuses;
@@ -74,7 +80,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
             changeUI(playHelper.getPlayStatus());
             changePlay(playHelper.getPlay());
             changeInfo(playHelper.getCurrentMp3Info());
-            System.out.println("恢复数据成功！！！");
+
             route();
         }
     }
@@ -87,6 +93,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         setContentView(R.layout.activity_home);
         startService(new Intent(this, PlayService.class));
         bindPlayService();
+        log("onCreate");
 
     }
 
@@ -96,6 +103,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         int tab_position=tabLayout.getSelectedTabPosition();
         outState.putInt("tab_position",tab_position);
         bundle=outState;
+        log("saveData");
     }
 
 
@@ -111,6 +119,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         playStatuses.add(PlayStatus.PLAY_RANDOM);
 
         resumeView();
+        log("onResume");
 
     }
 
@@ -133,7 +142,16 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         prepared();
         viewPagerSingleAdapter=new ViewPagerSingleAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerSingleAdapter);
+        log("onStart");
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        log("onStop");
+    }
+
+
 
     private void findId(){
         vdhLayout= (VDHLayout) findViewById(R.id.full_screen);
@@ -279,6 +297,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
     @Override
     protected void onPause() {
         super.onPause();
+        log("onPause");
     }
 
 
@@ -396,7 +415,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
                             animationUtil.closeMenu(views.get(i), i);
                         }
                         isClose = false;
-                        System.out.println("执行了打开的");
+
                     } else {
                         for (int i = 0; i < views.size(); i++) {
                             animationUtil.openMenuHorizontal(views.get(i), i);
@@ -404,7 +423,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
 
                         }
                         isClose = true;
-                        System.out.println("执行了关闭的");
+
 
                     }
                 }
@@ -477,7 +496,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         public void onServiceConnected(ComponentName name, IBinder service) {
             PlayService.PlayBind playBind= (PlayService.PlayBind) service;
             playService=playBind.getPlayService();
-            System.out.println("绑定成功！！！！！");
+
             playService.setOnChangeLinstner(HomeActivity.this);
         }
 
@@ -494,7 +513,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         if (!isBind){
             Intent intent=new Intent(this,PlayService.class);
             bindService(intent,serviceConnection, Context.BIND_AUTO_CREATE);
-            System.out.println("BaseActivity.bindPlayService");
+
             isBind=true;
 
         }
@@ -505,7 +524,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,C
         if (isBind){
             unbindService(serviceConnection);
             isBind=false;
-            System.out.println("BaseActivity.unbindPlayService");
+
         }
     }
 

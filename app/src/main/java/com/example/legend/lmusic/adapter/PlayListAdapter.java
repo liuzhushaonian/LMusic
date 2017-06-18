@@ -31,10 +31,10 @@ public class PlayListAdapter extends BaseAdapter<PlayListAdapter.ViewHolder>{
     public void setStringArrayList(ArrayList<String> stringArrayList) {
         if (stringArrayList!=null) {
             this.stringArrayList = stringArrayList;
-            System.out.println("没空");
+
         }else {
             this.stringArrayList=mp3Database.getList();
-            System.out.println("空的！！！");
+
         }
     }
 

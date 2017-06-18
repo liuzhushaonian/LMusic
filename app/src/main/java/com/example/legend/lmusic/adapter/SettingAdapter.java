@@ -53,7 +53,7 @@ public class SettingAdapter extends BaseAdapter<SettingAdapter.ViewHolder> {
                         break;
 
                     default:
-                        System.out.println("现在的位置是-------="+viewHolder.getAdapterPosition());
+
                         break;
                 }
             }

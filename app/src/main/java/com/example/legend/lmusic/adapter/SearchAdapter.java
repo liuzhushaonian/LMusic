@@ -52,7 +52,7 @@ public class SearchAdapter extends BaseAdapter<BaseAdapter.ViewHolder> implement
                     onputLinstener.putString(s);
                 }
             });
-            System.out.println("第一个识图————————————————");
+
 
             return viewHolder;
         }else {
@@ -73,7 +73,7 @@ public class SearchAdapter extends BaseAdapter<BaseAdapter.ViewHolder> implement
                 }
             });
 
-                System.out.println("第二个识图——————————————————————");
+
                 return viewHolder1;
         }
 

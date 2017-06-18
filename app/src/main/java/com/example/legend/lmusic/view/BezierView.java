@@ -70,7 +70,7 @@ public class BezierView extends View implements ValueAnimator.AnimatorUpdateList
     public BezierView(Context context) {
 //        this(context,null);
         super(context);
-        System.out.println("BezierView.BezierView1");
+
     }
 
 
@@ -99,7 +99,7 @@ public class BezierView extends View implements ValueAnimator.AnimatorUpdateList
 
         extra=(int)(circleRadius*2*factor/6);
         factor=0;
-        System.out.println("BezierView.BezierView2");
+
 
 
     }
@@ -113,7 +113,7 @@ public class BezierView extends View implements ValueAnimator.AnimatorUpdateList
         super(context, attrs, defStyleAttr);
 //
 
-        System.out.println("BezierView.BezierView3");
+
 
     }
 
